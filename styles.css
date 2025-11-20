@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap");
+
+:root {
+    --text-size: 1.8rem;
+    --elements-width: min(600px, 80vw);
+    --input-text-size: 1.5rem;
+    --text-font-weight: 500;
+    --border-rad: 20px;
+
+    font-size: 62.5%;
+    min-height: 100%;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(../images/pexels-anniroenkae-2318068.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bitcount Grid Single";
+}
+
+body {
+    width: 100vw;
+    min-height: 0px;
+    color: white;
+    padding-top: 90px;
+}
+
+section {
+    width: var(--elements-width);
+    line-height: 1.5;
+}
+
+section,
+form {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+p {
+    font-size: var(--text-size);
+    font-weight: var(--text-font-weight);
+    text-align: justify;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+button {
+    display: block;
+}
+
+form {
+    margin-top: 30px;
+    width: var(--elements-width);
+    font-size: var(--text-size);
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+form > div {
+    font-size: var(--text-size);
+    padding: 20px;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 15px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    > div {
+        width: 100%;
+    }
+}
+
+.inputs {
+    height: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-rad);
+    padding: 10px;
+    font-size: var(--input-text-size);
+    border: 2px solid black;
+}
+
+.inputs:focus,
+.inputs.inputs:not(:placeholder-shown):focus {
+    border-color: #CF48AB;
+    outline: none;
+}
+
+.inputs:valid {
+    border-color: green;
+}
+
+.inputs:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+button {
+    border-radius: var(--border-rad);
+    vertical-align: middle;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: var(--input-text-size);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: black;
+}
+
+input[type="checkbox"] {
+    accent-color: #CF48AB;
+    
+}
+
+@media (max-width: 617px) {
+    body {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    form {
+        height: auto;
+    }
+}
+
+@media (min-height: 1000px) {
+    body {
+        transform: translateY(50%);
+        padding-top: 15px;
+    }
+
+    section,
+    form {
+        transform: scale(130%);
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+}
